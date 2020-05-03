@@ -17,9 +17,11 @@
             <h4><a><%=campground.name%></a></h4>
             <p><%=campground.description%></p>
             <p><em>Added by: <%=campground.author.username%></em></p>
+            <a class="btn btn-warning" href="/campgrounds/<%=campground._id%>">Edit</a>
+            <a class="btn btn-primary" href="/campgrounds">Back to all campgrounds</a>
           </div>
         </div>
-        <a class="btn btn-primary" href="/campgrounds">Back to all campgrounds</a>
+
         <div class="well">
           <div class="text-right">
             <a class="btn btn-success" href="/campgrounds/<%=campground._id%>/comments/new">Add New Comment</a>
