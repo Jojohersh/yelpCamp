@@ -17,7 +17,10 @@
             <h4><a><%=campground.name%></a></h4>
             <p><%=campground.description%></p>
             <p><em>Added by: <%=campground.author.username%></em></p>
-            <a class="btn btn-warning" href="/campgrounds/<%=campground._id%>">Edit</a>
+            <a class="btn btn-warning" href="/campgrounds/<%=campground._id%>/edit">Edit</a>
+            <form id="delete-form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+              <button class="btn btn-danger">Delete</button>
+            </form>
             <a class="btn btn-primary" href="/campgrounds">Back to all campgrounds</a>
           </div>
         </div>
