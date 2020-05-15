@@ -36,7 +36,7 @@ app.use(flash());
 
 // PASSPORT CONFIG
 app.use(require("express-session")({
-  secret:"Put Your English Words Here Por Favor",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }));
@@ -59,5 +59,5 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 
 app.listen(process.env.PORT, () =>{
-  console.log("Yelp camp listening on port 3000...");
+  console.log(`Yelp camp listening on ${process.env.PORT}...`);
 });
